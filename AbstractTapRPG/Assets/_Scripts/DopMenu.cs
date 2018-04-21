@@ -17,17 +17,31 @@ public class DopMenu : MonoBehaviour {
 		dopMenu.SetActive (false);
 	}
 
-	void Update () { CheckShopStatus (); }
+	void Update () { 
+		CheckShopStatus (); 
+	}
 
-	public void OpenShop () { shopPanel.SetActive (!shopPanel.activeSelf); }
+	public void OpenShop () { 
+		shopPanel.SetActive (!shopPanel.activeSelf); 
+	}
 
 	public void OpenDopMenu () {
+		Debug.Log ("DopMenu is opened.. or not");
 		dopMenu.SetActive (!dopMenu.activeSelf);
-		if (!dopMenu.activeSelf && shopPanel.activeSelf) { shopPanel.SetActive (false); }
+		if (!dopMenu.activeSelf && shopPanel.activeSelf) { 
+			shopPanel.SetActive (false); 
+		}
 	}
 
 	public void CheckShopStatus () {
-		if (shopPanel.activeSelf) { shopOn = true;
-		} else { 					shopOn = false; }
+		if (shopPanel.activeSelf) { 
+			shopOn = true;
+		} else {
+			shopOn = false; 
+		}
+	}
+
+	public void Logger () {
+		Debug.Log ("Click on button");
 	}
 }
