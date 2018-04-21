@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{87D5431B-7577-8DD9-CC8F-D3E692E6EF8A}") = "AbstractTapRPG", "Assembly-CSharp.csproj", "{ADA9F353-BA29-87BE-DF98-2DA24191B98A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADA9F353-BA29-87BE-DF98-2DA24191B98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA9F353-BA29-87BE-DF98-2DA24191B98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA9F353-BA29-87BE-DF98-2DA24191B98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA9F353-BA29-87BE-DF98-2DA24191B98A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
