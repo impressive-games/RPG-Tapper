@@ -40,8 +40,4 @@ public class DopMenu : MonoBehaviour {
 			shopOn = false; 
 		}
 	}
-
-	public void Logger () {
-		Debug.Log ("Click on button");
-	}
 }
