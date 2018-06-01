@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_Behaviours/EnemyBhv.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\TapScreen.cs">
     <Files>
-      <File FileName="Assets/_Scripts/DopMenu.cs" Line="42" Column="3" />
-      <File FileName="Assets/_Scripts/_Behaviours/CompanionBehav.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/_Behaviours/FireBallBhv.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/_Behaviours/EnemyBhv.cs" Line="13" Column="35" />
-      <File FileName="Assets/_Scripts/TapScreen.cs" Line="74" Column="24" />
+      <File FileName="Assets\_Scripts\DopMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\_Behaviours\CompanionBehav.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\_Behaviours\FireBallBhv.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\_Behaviours\EnemyBhv.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\TapScreen.cs" Line="64" Column="61" />
+      <File FileName="Assets\_Scripts\QuickTimeEvent.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

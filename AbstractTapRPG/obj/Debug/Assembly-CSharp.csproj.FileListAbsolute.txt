@@ -1,1 +1,2 @@
 F:\Maksimov A.A\Trash\UnityPRj\AbstractTapRPG\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\GitHubRep\RPG-Tapper\AbstractTapRPG\obj\Debug\Assembly-CSharp.dll

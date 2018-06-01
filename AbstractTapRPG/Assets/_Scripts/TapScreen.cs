@@ -83,14 +83,8 @@ public class TapScreen : MonoBehaviour {
 	}
 
 	void BossFight () {
-		
 		if (countLevel % 10 == 0 && countLevel != 0) {
-			
-			if (!spawnQTE) {
-				Instantiate (QTEPrefab, new Vector2 (Enemy.transform.position.x - Random.Range (-1f, 1f), Enemy.transform.position.y + Random.Range (1f, 4f)), Quaternion.identity);
-			} else {
-				return;
-			}
+			Debug.Log ("Alarma!! BossFoght!");
 		}
 	}
 
