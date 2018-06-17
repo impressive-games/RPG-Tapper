@@ -11,7 +11,10 @@ public class BuyDamage : MonoBehaviour {
 	public Text[] buttonText;							//массив текста кнопок (что будет отображаться на кнопке)
 	public Button[] bttn;								//массив кнопок
 	#endregion
-	void Update() { CheckPrice (); }
+
+	void Update() { 
+		CheckPrice (); 
+	}
 
 	void CheckPrice() {					//метод проверяет каждый кадр доступность цены для игрока
 		for (int i = 0; i < price.Length; i++) {
