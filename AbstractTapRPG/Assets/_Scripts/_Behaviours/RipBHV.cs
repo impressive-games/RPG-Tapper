@@ -2,7 +2,26 @@
 using System.Collections;
 
 public class RipBHV : MonoBehaviour {
-	void Update () { 
-		transform.localPosition += new Vector3 (0.1f, 0);
+	public float moveSpeed = 2f;
+
+	void Start () {
+		StartCoroutine (LiveTime ());
+	}
+
+	void Update () {
+		if (transform.localPosition.x >= 6) {
+			moveSpeed = 0;
+		}
+
+		transform.Translate (Vector2.right * Time.deltaTime * moveSpeed);
+
+		if (moveSpeed == 0) {
+			transform.Translate (Vector2.down * Time.deltaTime * 1.5f);
+		}
+	}
+
+	IEnumerator LiveTime () {
+		yield return new WaitForSeconds (3f);
+		Destroy (gameObject);
 	}
 }

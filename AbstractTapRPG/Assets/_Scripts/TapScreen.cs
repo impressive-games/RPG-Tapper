@@ -53,7 +53,8 @@ public class TapScreen : MonoBehaviour {
 
 		enmHealthTxt.text = enmHOut;
 		startText.text = 
-			"PlayerNickname\n" + "--------------" +
+			"PlayerNickname" + 
+			"\n--------------" +
 			"\n DMG: " + dmgOut +
 			"\n DPS: " + dpsOut + 
 			"\nGold: " + coinOut + 
@@ -93,15 +94,11 @@ public class TapScreen : MonoBehaviour {
 			enemyHealth -= dmg;
 			enemyHaveDMG = true;
 		}
-		Hero.transform.Translate(new Vector3 (0.5f, 0, 0));													//Действие персонажа при нажатии на экран
-//		Enemy.transform.localScale = Enemy.transform.localScale - new Vector3 (0.1f, 0.1f, 0);				//Действие вравга при нажатии на экран
-//		Enemy.GetComponent<SpriteRenderer> ().color = new Color (1,0,0,1);
+		Hero.transform.Translate(new Vector3 (0.5f, 0, 0));
 	}
 
 	void UnitDeaction () {
 		Hero.transform.Translate(new Vector3 (-0.5f, 0, 0));
-//		Enemy.transform.localScale = Enemy.transform.localScale + new Vector3 (0.1f, 0.1f, 0);
-//		Enemy.GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
 	}
 
 	/*void BossFight () {

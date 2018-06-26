@@ -7,6 +7,7 @@ public class EnemyBhv : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 	}
+
 	void Update () {
 
 		if (TapScreen.enemyHaveDMG) {
