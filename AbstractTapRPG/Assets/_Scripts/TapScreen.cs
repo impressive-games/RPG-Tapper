@@ -5,8 +5,9 @@ using System.Collections;
 public class TapScreen : MonoBehaviour {
 
 	#region Variables
-	public GameObject QTEPrefab;
+	public GameObject QTEPrefab;					//Указываем на КТЕ префаб
 	public GameObject coinPrefab;					//Указываем на монетку
+	public GameObject RipPrefab;
 	public GameObject Hero;							//Указываем на героя
 	public GameObject Enemy;						//Указываем на врага
 	public Text startText;							//Показывает количество убитых врагов. Позже - количество полученного золота 
@@ -36,10 +37,10 @@ public class TapScreen : MonoBehaviour {
 	void Update () {
 		TapNew ();				//отвечает за счет тапов по экрану
 		CheckShop ();			//проверяет активность магазина
-		KillEnemy ();			//действие, если враг погиб
+		EnemyDeath ();			//действие, если враг погиб
 		CollectCoin ();			//отвечает за сбор монет
 
-		BossFight ();
+//		BossFight ();
 
 		DropButtons ();			//Trash void
 
@@ -52,55 +53,34 @@ public class TapScreen : MonoBehaviour {
 
 		enmHealthTxt.text = enmHOut;
 		startText.text = 
-			"PlayerNickname\n" + "--------------" +
+			"PlayerNickname" + 
+			"\n--------------" +
 			"\n DMG: " + dmgOut +
 			"\n DPS: " + dpsOut + 
 			"\nGold: " + coinOut + 
 			"\nKill: " + countLevel.ToString();
 	}
 		
-	void TapNew () {				//новый метод тапов работает только на телефонах
-		foreach(Touch touch in Input.touches) {					//перебираем все нажатия и их состояния
-			if (touch.phase == TouchPhase.Began && !DopMenu.shopOn) { UnitAction (); }
-			if (touch.phase == TouchPhase.Ended && !DopMenu.shopOn) { UnitDeaction (); }
-		}
-	}
-		
-	void UnitAction () {
-		if (stopCollecting == false) { 
-			enemyHealth -= dmg;
-			enemyHaveDMG = true;
-		}
-		Hero.transform.Translate(new Vector3 (0.5f, 0, 0));													//Действие персонажа при нажатии на экран
-//		Enemy.transform.localScale = Enemy.transform.localScale - new Vector3 (0.1f, 0.1f, 0);				//Действие вравга при нажатии на экран
-//		Enemy.GetComponent<SpriteRenderer> ().color = new Color (1,0,0,1);
-	}
-
-	void UnitDeaction () {
-		Hero.transform.Translate(new Vector3 (-0.5f, 0, 0));
-//		Enemy.transform.localScale = Enemy.transform.localScale + new Vector3 (0.1f, 0.1f, 0);
-//		Enemy.GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
-	}
-
-	void BossFight () {
-		
-		if (countLevel % 10 == 0 && countLevel != 0) {
-			
-			if (!spawnQTE) {
-				Instantiate (QTEPrefab, new Vector2 (Enemy.transform.position.x - Random.Range (-1f, 1f), Enemy.transform.position.y + Random.Range (1f, 4f)), Quaternion.identity);
-			} else {
-				return;
+	void TapNew () {									//новый метод тапов работает только на телефонах
+		foreach(Touch touch in Input.touches) {			//перебираем все нажатия и их состояния
+			if (touch.phase == TouchPhase.Began && !DopMenu.shopOn) { 
+				UnitAction (); 
+			}
+			if (touch.phase == TouchPhase.Ended && !DopMenu.shopOn) { 
+				UnitDeaction (); 
 			}
 		}
 	}
-
-	void KillEnemy () {
+		
+	void EnemyDeath () {
 		if (enemyHealth <= 0) {
 			spawnEnemy = true;
 			countLevel++;
 			enmHealthNeed += (long)(enmHealthNeed * 0.2f);
 			enemyHealth = enmHealthNeed;
-		
+
+			Instantiate (RipPrefab, Enemy.transform.position, Quaternion.identity);
+
 			for (int dropCoinCount = Random.Range (2,5); dropCoinCount > 0; dropCoinCount--) {
 				Instantiate (coinPrefab, new Vector2 (Enemy.transform.position.x, Enemy.transform.position.y + 3f), Quaternion.identity);
 			}
@@ -108,6 +88,24 @@ public class TapScreen : MonoBehaviour {
 			spawnEnemy = false;
 		}
 	}
+
+	void UnitAction () {
+		if (stopCollecting == false) { 
+			enemyHealth -= dmg;
+			enemyHaveDMG = true;
+		}
+		Hero.transform.Translate(new Vector3 (0.5f, 0, 0));
+	}
+
+	void UnitDeaction () {
+		Hero.transform.Translate(new Vector3 (-0.5f, 0, 0));
+	}
+
+	/*void BossFight () {
+		if (countLevel % 10 == 0 && countLevel != 0) {
+			Debug.Log ("Alarma!! BossFoght!");
+		}
+	}*/
 
 	void CheckShop () {
 		if (DopMenu.shopOn) {

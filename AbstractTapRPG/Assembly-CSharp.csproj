@@ -48,6 +48,7 @@
      <Compile Include="Assets\_Scripts\BuyDamage.cs" />
      <Compile Include="Assets\_Scripts\DopMenu.cs" />
      <Compile Include="Assets\_Scripts\MouseOver.cs" />
+     <Compile Include="Assets\_Scripts\OptionController.cs" />
      <Compile Include="Assets\_Scripts\QuickTimeEvent.cs" />
      <Compile Include="Assets\_Scripts\SceneLoader.cs" />
      <Compile Include="Assets\_Scripts\TapScreen.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\_Scripts\_Behaviours\CompanionBehav.cs" />
      <Compile Include="Assets\_Scripts\_Behaviours\EnemyBhv.cs" />
      <Compile Include="Assets\_Scripts\_Behaviours\FireBallBhv.cs" />
+     <Compile Include="Assets\_Scripts\_Behaviours\RipBHV.cs" />
      <Compile Include="Assets\_Scripts\_Dialog\Dialog.cs" />
      <Compile Include="Assets\_Scripts\_Dialog\DialogManager.cs" />
      <Compile Include="Assets\_Scripts\_Dialog\DialogTrigger.cs" />
