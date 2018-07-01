@@ -4,12 +4,12 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class DopMenu : MonoBehaviour {
+	#region Variables
 	public GameObject dopMenu;
 	public GameObject shopPanel;
 
 	public static bool shopOn;						//переменная отвечает за определение состояния магазина
-
-//-----------------------------------------------
+	#endregion
 
 	void Start () {
 		shopOn = false;

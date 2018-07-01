@@ -9,7 +9,9 @@ public class TapScreen : MonoBehaviour {
 	public GameObject coinPrefab;					//Указываем на монетку
 	public GameObject RipPrefab;
 	public GameObject Hero;							//Указываем на героя
+
 	public GameObject Enemy;						//Указываем на врага
+
 	public Text startText;							//Показывает количество убитых врагов. Позже - количество полученного золота 
 	public Text enmHealthTxt;						//Обозначение жизни врага
 
@@ -36,14 +38,13 @@ public class TapScreen : MonoBehaviour {
 
 	void Update () {
 		TapNew ();				//отвечает за счет тапов по экрану
-		CheckShop ();			//проверяет активность магазина
+//		CheckShop ();			//проверяет активность магазина
 		EnemyDeath ();			//действие, если враг погиб
 		CollectCoin ();			//отвечает за сбор монет
 
 //		BossFight ();
 
 		DropButtons ();			//Trash void
-
 
 		//-----------------OUTPUT------------------
 		enmHOut = ConvertV6 (enemyHealth);
@@ -52,6 +53,7 @@ public class TapScreen : MonoBehaviour {
 		coinOut = ConvertV6 (coin);
 
 		enmHealthTxt.text = enmHOut;
+
 		startText.text = 
 			"PlayerNickname" + 
 			"\n--------------" +
@@ -106,15 +108,6 @@ public class TapScreen : MonoBehaviour {
 			Debug.Log ("Alarma!! BossFoght!");
 		}
 	}*/
-
-	void CheckShop () {
-		if (DopMenu.shopOn) {
-			Enemy.SetActive (false);
-			enmHealthTxt.text = "";
-		} else {
-			Enemy.SetActive (true);
-		}
-	}
 
 	void CollectCoin ()	{
 		if (spawnEnemy && stopCollecting == false) {
