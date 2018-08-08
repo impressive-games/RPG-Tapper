@@ -20,6 +20,7 @@ public class FireBallBhv : MonoBehaviour {
 
 	void OnTriggerEnter2D () {
 		TapScreen.enemyHealth -= TapScreen.dps;
+		TapScreen.enemyHaveDMG = true;
 		Destroy (gameObject);
 	}
 }
