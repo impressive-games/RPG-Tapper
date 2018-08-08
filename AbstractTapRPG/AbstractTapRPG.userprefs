@@ -1,11 +1,29 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_Behaviours/FireBallBhv.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/_Dialog/Dialog.cs">
     <Files>
-      <File FileName="Assets/_Scripts/TapScreen.cs" Line="24" Column="17" />
-      <File FileName="Assets/_Scripts/_Behaviours/EnemyBhv.cs" Line="12" Column="3" />
-      <File FileName="Assets/_Scripts/_Behaviours/FireBallBhv.cs" Line="11" Column="32" />
+      <File FileName="Assets/_Scripts/TapScreen.cs" Line="57" Column="3" />
+      <File FileName="Assets/_Scripts/_Behaviours/EnemyBhv.cs" Line="5" Column="19" />
+      <File FileName="Assets/_Scripts/_Dialog/Dialog.cs" Line="5" Column="20" />
+      <File FileName="Assets/_Scripts/_Dialog/DialogManager.cs" Line="43" Column="23" />
+      <File FileName="Assets/_Scripts/_Dialog/DialogTrigger.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AbstractTapRPG" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="_Scripts" expanded="True">
+                <Node name="_Behaviours" expanded="True" />
+                <Node name="_Dialog" expanded="True">
+                  <Node name="Dialog.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
